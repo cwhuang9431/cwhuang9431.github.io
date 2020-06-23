@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MSSQL 有關日期的操作 | 程式農夫</title><meta name="description" content="在使用資料庫時，時常會用到跟日期或時間相關的操作，例如取得當下日期、加幾日、計算日期相差幾天等等。 取得現在的日期時間：GETDATE()取得當前的日期和時間 (current date and time) SELECT GETDATE(); &#x2F;&#x2F; &#39;2018-11-30 13:10:02.047&#39; 取出日期和時間中特定的部分：DATEPART()用 DATEPART() 函數來取出日期和時間中特"><meta name="keywords" content="MSSQL"><meta name="author" content="程式農夫"><meta name="copyright" content="程式農夫"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="MSSQL 有關日期的操作"><meta name="twitter:description" content="在使用資料庫時，時常會用到跟日期或時間相關的操作，例如取得當下日期、加幾日、計算日期相差幾天等等。 取得現在的日期時間：GETDATE()取得當前的日期和時間 (current date and time) SELECT GETDATE(); &#x2F;&#x2F; &#39;2018-11-30 13:10:02.047&#39; 取出日期和時間中特定的部分：DATEPART()用 DATEPART() 函數來取出日期和時間中特"><meta name="twitter:image" content="https://images.unsplash.com/photo-1590203127965-fdb8093082ee?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"><meta property="og:type" content="article"><meta property="og:title" content="MSSQL 有關日期的操作"><meta property="og:url" content="https://cwhuang9431.github.io/2020/06/23/mssql-date/"><meta property="og:site_name" content="程式農夫"><meta property="og:description" content="在使用資料庫時，時常會用到跟日期或時間相關的操作，例如取得當下日期、加幾日、計算日期相差幾天等等。 取得現在的日期時間：GETDATE()取得當前的日期和時間 (current date and time) SELECT GETDATE(); &#x2F;&#x2F; &#39;2018-11-30 13:10:02.047&#39; 取出日期和時間中特定的部分：DATEPART()用 DATEPART() 函數來取出日期和時間中特"><meta property="og:image" content="https://images.unsplash.com/photo-1590203127965-fdb8093082ee?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"><meta property="article:published_time" content="2020-06-23T12:46:39.000Z"><meta property="article:modified_time" content="2020-06-23T12:46:39.127Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://cwhuang9431.github.io/2020/06/23/mssql-date/"><link rel="next" title="MySQL 有關日期的操作" href="https://cwhuang9431.github.io/2020/06/22/mysql-date/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '鍵將本頁加入書籤'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="程式農夫" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">9</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分類</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分類</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目錄</div><div class="sidebar-toc__progress"><span class="progress-notice">你已經讀了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#取得現在的日期時間：GETDATE"><span class="toc-number">1.</span> <span class="toc-text">取得現在的日期時間：GETDATE()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#取出日期和時間中特定的部分：DATEPART"><span class="toc-number">2.</span> <span class="toc-text">取出日期和時間中特定的部分：DATEPART()</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DATEPART-語法-Syntax"><span class="toc-number">2.1.</span> <span class="toc-text">DATEPART() 語法 (Syntax)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參數"><span class="toc-number">2.2.</span> <span class="toc-text">參數</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DATEPART-範例"><span class="toc-number">2.3.</span> <span class="toc-text">DATEPART() 範例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#增加或減少指定的時間間隔：DATEADD"><span class="toc-number">3.</span> <span class="toc-text">增加或減少指定的時間間隔：DATEADD()</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DATEADD-語法-Syntax"><span class="toc-number">3.1.</span> <span class="toc-text">DATEADD() 語法 (Syntax)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參數-1"><span class="toc-number">3.2.</span> <span class="toc-text">參數</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DATEADD-範例"><span class="toc-number">3.3.</span> <span class="toc-text">DATEADD() 範例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#日期相減：DATEDIFF"><span class="toc-number">4.</span> <span class="toc-text">日期相減：DATEDIFF()</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DATEDIFF-語法-Syntax"><span class="toc-number">4.1.</span> <span class="toc-text">DATEDIFF() 語法 (Syntax)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參數-2"><span class="toc-number">4.2.</span> <span class="toc-text">參數</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DATEDIFF-範例"><span class="toc-number">4.3.</span> <span class="toc-text">DATEDIFF() 範例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#格式化顯示日期和時間：CONVERT"><span class="toc-number">5.</span> <span class="toc-text">格式化顯示日期和時間：CONVERT()</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#參數-3"><span class="toc-number">5.1.</span> <span class="toc-text">參數</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DATEDIFF-範例-1"><span class="toc-number">5.2.</span> <span class="toc-text">DATEDIFF() 範例</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://images.unsplash.com/photo-1590203127965-fdb8093082ee?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">程式農夫</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分類</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">MSSQL 有關日期的操作</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="發表於 2020-06-23 20:46:39"><i class="fa fa-calendar" aria-hidden="true"></i> 發表於 2020-06-23</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新於 2020-06-23 20:46:39"><i class="fa fa-history" aria-hidden="true"></i> 更新於 2020-06-23</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>閱讀量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>在使用資料庫時，時常會用到跟日期或時間相關的操作，例如取得當下日期、加幾日、計算日期相差幾天等等。</p>
+<h1 id="取得現在的日期時間：GETDATE"><a href="#取得現在的日期時間：GETDATE" class="headerlink" title="取得現在的日期時間：GETDATE()"></a>取得現在的日期時間：GETDATE()</h1><p>取得當前的日期和時間 (current date and time)</p>
+<pre><code class="sql"><span class="keyword">SELECT</span> <span class="keyword">GETDATE</span>(); // '2018-11-30 13:10:02.047'</code></pre>
+<h1 id="取出日期和時間中特定的部分：DATEPART"><a href="#取出日期和時間中特定的部分：DATEPART" class="headerlink" title="取出日期和時間中特定的部分：DATEPART()"></a>取出日期和時間中特定的部分：DATEPART()</h1><p>用 DATEPART() 函數來取出日期和時間中特定的部分，比如年、月、日、時、分、秒等。</p>
+<h2 id="DATEPART-語法-Syntax"><a href="#DATEPART-語法-Syntax" class="headerlink" title="DATEPART() 語法 (Syntax)"></a>DATEPART() 語法 (Syntax)</h2><pre><code class="sql">DATEPART(datepart , date)</code></pre>
+<h2 id="參數"><a href="#參數" class="headerlink" title="參數"></a>參數</h2><p>datepart 可改為下列</p>
+<ul>
+<li>year, yyyy, yy = Year</li>
+<li>quarter, qq, q = Quarter</li>
+<li>month, mm, m = month</li>
+<li>dayofyear, dy, y = Day of the year</li>
+<li>day, dd, d = Day of the month</li>
+<li>week, ww, wk = Week</li>
+<li>weekday, dw, w = Weekday</li>
+<li>hour, hh = hour</li>
+<li>minute, mi, n = Minute</li>
+<li>second, ss, s = Second</li>
+<li>millisecond, ms = Millisecond</li>
+</ul>
+<h2 id="DATEPART-範例"><a href="#DATEPART-範例" class="headerlink" title="DATEPART() 範例"></a>DATEPART() 範例</h2><pre><code class="sql"><span class="keyword">SELECT</span> <span class="keyword">DATEPART</span>(<span class="keyword">year</span>, <span class="string">'2017/08/25'</span>); // 2017</code></pre>
+<h1 id="增加或減少指定的時間間隔：DATEADD"><a href="#增加或減少指定的時間間隔：DATEADD" class="headerlink" title="增加或減少指定的時間間隔：DATEADD()"></a>增加或減少指定的時間間隔：DATEADD()</h1><h2 id="DATEADD-語法-Syntax"><a href="#DATEADD-語法-Syntax" class="headerlink" title="DATEADD() 語法 (Syntax)"></a>DATEADD() 語法 (Syntax)</h2><pre><code>DATEADD(datepart, number, date)</code></pre><h2 id="參數-1"><a href="#參數-1" class="headerlink" title="參數"></a>參數</h2><p>datepart 可改為下列</p>
+<ul>
+<li>year, yyyy, yy = Year</li>
+<li>quarter, qq, q = Quarter</li>
+<li>month, mm, m = month</li>
+<li>dayofyear, dy, y = Day of the year</li>
+<li>day, dd, d = Day</li>
+<li>week, ww, wk = Week</li>
+<li>weekday, dw, w = Weekday</li>
+<li>hour, hh = hour</li>
+<li>minute, mi, n = Minute</li>
+<li>second, ss, s = Second</li>
+<li>millisecond, ms = Millisecond</li>
+</ul>
+<h2 id="DATEADD-範例"><a href="#DATEADD-範例" class="headerlink" title="DATEADD() 範例"></a>DATEADD() 範例</h2><pre><code class="sql"><span class="keyword">SELECT</span> <span class="keyword">DATEADD</span>(<span class="keyword">month</span>, <span class="number">-2</span>, <span class="string">'2017/08/25'</span>); // 2017-06-25 00:00:00.000</code></pre>
+<h1 id="日期相減：DATEDIFF"><a href="#日期相減：DATEDIFF" class="headerlink" title="日期相減：DATEDIFF()"></a>日期相減：DATEDIFF()</h1><p>DATEDIFF() 執行後會返回一個正負數的整數，表示 enddate - startdate 的時間間隔，datepart 參數則用來指定返回值的單位。</p>
+<h2 id="DATEDIFF-語法-Syntax"><a href="#DATEDIFF-語法-Syntax" class="headerlink" title="DATEDIFF() 語法 (Syntax)"></a>DATEDIFF() 語法 (Syntax)</h2><pre><code>DATEDIFF(datepart, startdate, enddate)</code></pre><h2 id="參數-2"><a href="#參數-2" class="headerlink" title="參數"></a>參數</h2><p>datepart可改為下列</p>
+<ul>
+<li>year, yyyy, yy = Year</li>
+<li>quarter, qq, q = Quarter</li>
+<li>month, mm, m = month</li>
+<li>dayofyear = Day of the year</li>
+<li>day, dy, y = Day</li>
+<li>week, ww, wk = Week</li>
+<li>weekday, dw, w = Weekday</li>
+<li>hour, hh = hour</li>
+<li>minute, mi, n = Minute</li>
+<li>second, ss, s = Second</li>
+<li>millisecond, ms = Millisecond</li>
+</ul>
+<h2 id="DATEDIFF-範例"><a href="#DATEDIFF-範例" class="headerlink" title="DATEDIFF() 範例"></a>DATEDIFF() 範例</h2><pre><code class="sql"><span class="keyword">SELECT</span> <span class="keyword">DATEDIFF</span>(<span class="keyword">month</span>, <span class="string">'2017/08/25'</span>, <span class="string">'2011/08/25'</span>); // -72</code></pre>
+<h1 id="格式化顯示日期和時間：CONVERT"><a href="#格式化顯示日期和時間：CONVERT" class="headerlink" title="格式化顯示日期和時間：CONVERT()"></a>格式化顯示日期和時間：CONVERT()</h1><p>CONVERT(data_type, date, style)  </p>
+<h2 id="參數-3"><a href="#參數-3" class="headerlink" title="參數"></a>參數</h2><table>
+<thead>
+<tr>
+<th align="left">Without century</th>
+<th align="left">With century</th>
+<th align="left">Input/Output</th>
+<th align="left">Standard</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0</td>
+<td align="left">100</td>
+<td align="left">mon dd yyyy hh:miAM/PM</td>
+<td align="left">Default</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">101</td>
+<td align="left">mm/dd/yyyy</td>
+<td align="left">US</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">102</td>
+<td align="left">yyyy.mm.dd</td>
+<td align="left">ANSI</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">103</td>
+<td align="left">dd/mm/yyyy</td>
+<td align="left">British/French</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">104</td>
+<td align="left">dd.mm.yyyy</td>
+<td align="left">German</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">105</td>
+<td align="left">dd-mm-yyyy</td>
+<td align="left">Italian</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">106</td>
+<td align="left">dd mon yyyy</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">107</td>
+<td align="left">Mon dd, yyyy</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">108</td>
+<td align="left">hh:mm:ss</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">109</td>
+<td align="left">mon dd yyyy hh:mi:ss:mmmAM (or PM)</td>
+<td align="left">Default + millisec</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">110</td>
+<td align="left">mm-dd-yyyy</td>
+<td align="left">USA</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">111</td>
+<td align="left">yyyy/mm/dd</td>
+<td align="left">Japan</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">112</td>
+<td align="left">yyyymmdd</td>
+<td align="left">ISO</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">113</td>
+<td align="left">dd mon yyyy hh:mi:ss:mmm</td>
+<td align="left">Europe (24 hour clock)</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">114</td>
+<td align="left">hh:mi:ss:mmm</td>
+<td align="left">24 hour clock</td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">120</td>
+<td align="left">yyyy-mm-dd hh:mi:ss</td>
+<td align="left">ODBC canonical (24 hour clock)</td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">121</td>
+<td align="left">yyyy-mm-dd hh:mi:ss.mmm</td>
+<td align="left">ODBC canonical (24 hour clock)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">126</td>
+<td align="left">yyyy-mm-ddThh:mi:ss.mmm</td>
+<td align="left">ISO8601</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">127</td>
+<td align="left">yyyy-mm-ddThh:mi:ss.mmmZ</td>
+<td align="left">ISO8601 (with time zone Z)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">130</td>
+<td align="left">dd mon yyyy hh:mi:ss:mmmAM</td>
+<td align="left">Hijiri</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">131</td>
+<td align="left">dd/mm/yy hh:mi:ss:mmmAM</td>
+<td align="left">Hijiri</td>
+</tr>
+</tbody></table>
+<h2 id="DATEDIFF-範例-1"><a href="#DATEDIFF-範例-1" class="headerlink" title="DATEDIFF() 範例"></a>DATEDIFF() 範例</h2><pre><code class="sql"><span class="keyword">SELECT</span> <span class="keyword">CONVERT</span>(<span class="built_in">varchar</span>, <span class="string">'2017-08-25'</span>, <span class="number">101</span>); // 2017-08-25</code></pre>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">程式農夫</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://cwhuang9431.github.io/2020/06/23/mssql-date/">https://cwhuang9431.github.io/2020/06/23/mssql-date/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://cwhuang9431.github.io" target="_blank">程式農夫</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MSSQL/">MSSQL</a></div><div class="post_share"></div></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/06/22/mysql-date/"><img class="next_cover" src="https://images.unsplash.com/photo-1590203127965-fdb8093082ee?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">MySQL 有關日期的操作</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 評論</span></div><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://cwhuang9431.github.io/2020/06/23/mssql-date/';
+  this.page.identifier = '2020/06/23/mssql-date/';
+  this.page.title = 'MSSQL 有關日期的操作';
+};
+(function() { 
+  var d = document, s = d.createElement('script');
+  s.src = 'https://program-farmer.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By 程式農夫</div><div class="framework-info"><span>Power by </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="閱讀模式"></i><i class="fa fa-plus" id="font_plus" title="放大字型"></i><i class="fa fa-minus" id="font_minus" title="縮小字型"></i></div><div id="rightside-config-show"><div id="rightside_config" title="設定"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直達評論"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目錄" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到頂部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@3/instantpage.min.js" type="module"></script></body></html>
