@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cwhuang9431.github.io/"/>
-  <updated>2020-06-26T16:02:30.918Z</updated>
+  <updated>2020-06-26T16:06:53.389Z</updated>
   <id>https://cwhuang9431.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cwhuang9431.github.io/2020/06/27/win10-SMB/"/>
     <id>https://cwhuang9431.github.io/2020/06/27/win10-SMB/</id>
     <published>2020-06-26T16:02:30.000Z</published>
-    <updated>2020-06-26T16:02:30.918Z</updated>
+    <updated>2020-06-26T16:06:53.389Z</updated>
     
     <content type="html"><![CDATA[<p>在 Windows XP或Windows 7 系統裡網路上的芳鄰的共用資料夾(SMB)服務是預設開啟的，有就是只要在檔案總管的網趾列，打上 「 \\xxx.xxx.xxx.xxx 」就可以連線到 xxx.xxx.xxx.xxx 這部電腦的網路磁碟，這在共用資料夾或是事務機掃描後自動傳到電腦內(部分事務機有此功能)是非常好用的，但當電腦換成win10後，卻發現無法正常使用，原因是Windows 10考量安全性問題，Windows 10 各版本作業系統中伺服器訊息區第1版 (SMBv1)網路通訊協定預設未安裝，可以用下列步驟開啟</p><h1 id="window功能"><a href="#window功能" class="headerlink" title="window功能"></a>window功能</h1><p><img src="win10_smb_1.png" alt="開始-&gt;設定"><br><img src="win10_smb_2.png" alt="APP"><br><img src="win10_smb_3.png" alt="程式和功能"><br><img src="win10_smb_4.png" alt="開啟或關閉windows功能"><br><img src="win10_smb_5.png" alt="安裝SMB"></p>]]></content>
     
