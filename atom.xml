@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cwhuang9431.github.io/"/>
-  <updated>2020-06-26T01:50:16.496Z</updated>
+  <updated>2020-06-26T16:02:30.918Z</updated>
   <id>https://cwhuang9431.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在Windows 10系統連線至支援SMBv1通訊協定的網路裝置</title>
+    <link href="https://cwhuang9431.github.io/2020/06/27/win10-SMB/"/>
+    <id>https://cwhuang9431.github.io/2020/06/27/win10-SMB/</id>
+    <published>2020-06-26T16:02:30.000Z</published>
+    <updated>2020-06-26T16:02:30.918Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 Windows XP或Windows 7 系統裡網路上的芳鄰的共用資料夾(SMB)服務是預設開啟的，有就是只要在檔案總管的網趾列，打上 「 \\xxx.xxx.xxx.xxx 」就可以連線到 xxx.xxx.xxx.xxx 這部電腦的網路磁碟，這在共用資料夾或是事務機掃描後自動傳到電腦內(部分事務機有此功能)是非常好用的，但當電腦換成win10後，卻發現無法正常使用，原因是Windows 10考量安全性問題，Windows 10 各版本作業系統中伺服器訊息區第1版 (SMBv1)網路通訊協定預設未安裝，可以用下列步驟開啟</p><h1 id="window功能"><a href="#window功能" class="headerlink" title="window功能"></a>window功能</h1><p><img src="win10_smb_1.png" alt="開始-&gt;設定"><br><img src="win10_smb_2.png" alt="APP"><br><img src="win10_smb_3.png" alt="程式和功能"><br><img src="win10_smb_4.png" alt="開啟或關閉windows功能"><br><img src="win10_smb_5.png" alt="安裝SMB"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在 Windows XP或Windows 7 系統裡網路上的芳鄰的共用資料夾(SMB)服務是預設開啟的，有就是只要在檔案總管的網趾列，打上 「 \\xxx.xxx.xxx.xxx 」就可以連線到 xxx.xxx.xxx.xxx 這部電腦的網路磁碟，這在共用資料夾或是事務機掃
+      
+    
+    </summary>
+    
+    
+      <category term="作業系統" scheme="https://cwhuang9431.github.io/categories/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1/"/>
+    
+      <category term="Windows 10" scheme="https://cwhuang9431.github.io/categories/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1/Windows-10/"/>
+    
+    
+      <category term="Windows 10" scheme="https://cwhuang9431.github.io/tags/Windows-10/"/>
+    
+      <category term="SMB" scheme="https://cwhuang9431.github.io/tags/SMB/"/>
+    
+      <category term="共用資料夾" scheme="https://cwhuang9431.github.io/tags/%E5%85%B1%E7%94%A8%E8%B3%87%E6%96%99%E5%A4%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL Server 使用迴圈</title>
