@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/ 
+Disallow: /vendors/
+Disallow: /fonts/
+Disallow: /vendors/
+Sitemap: https://cwhuang9431.github.io/sitemap.xml
