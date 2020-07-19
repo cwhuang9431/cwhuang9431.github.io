@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cwhuang9431.github.io/"/>
-  <updated>2020-07-19T06:18:12.950Z</updated>
+  <updated>2020-07-19T07:20:47.643Z</updated>
   <id>https://cwhuang9431.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>版本控制 git</title>
+    <link href="https://cwhuang9431.github.io/2020/07/19/git/"/>
+    <id>https://cwhuang9431.github.io/2020/07/19/git/</id>
+    <published>2020-07-19T07:20:47.000Z</published>
+    <updated>2020-07-19T07:20:47.643Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基礎設定"><a href="#基礎設定" class="headerlink" title="基礎設定"></a>基礎設定</h1><ul><li>查詢版本→git version</li><li>查詢設定列表→git config –list</li><li>輸入姓名→git config –global user.name “你的名字”</li><li>輸入email→git config –global user.email “你的email”</li></ul><h1 id="檔案狀態"><a href="#檔案狀態" class="headerlink" title="檔案狀態"></a>檔案狀態</h1><ul><li>工作目錄<ul><li>git add→由工作目錄放到暫存區</li></ul></li><li>暫存區域<ul><li>git commit→由暫存區放到儲存庫</li></ul></li><li>儲存庫</li></ul><h1 id="新增本地-遠端數據庫"><a href="#新增本地-遠端數據庫" class="headerlink" title="新增本地/遠端數據庫"></a>新增本地/遠端數據庫</h1><ul><li>在本地資料夾新增數據庫→git init</li><li>複製遠端數據庫→git clone 遠端數據庫網址</li></ul><h1 id="還原檔案"><a href="#還原檔案" class="headerlink" title="還原檔案"></a>還原檔案</h1><ol><li><p>恢復檔案到最新的commit狀態</p><ul><li>單一檔案：git checkout 檔案名稱 or git restore 檔案名稱</li><li>所有檔案：git checkout . or git restore .</li><li>用TortoiseGit 的Show Log 然後轉到想要的版本，在檔案上案右鍵[revert to this version]更方便</li></ul></li><li><p>reset → git reset [commit代碼|tag|代名詞] [參數]</p><ul><li>參數<ul><li>--mixed(預設) 差異放至工作目錄</li><li>--soft 差異放至暫存區</li><li>--hard 差異丟棄</li></ul></li></ul></li><li><p>[commit代碼|tag|代名詞]</p><ul><li>[commit代碼|tag|代名詞]^ → 此代碼的前一個</li><li>[commit代碼|tag|代名詞]^^ → 此代碼的前兩個 = [commit代碼|tag|代名詞]~2</li><li>[commit代碼|tag|代名詞]^^^ → 此代碼的前三個 = [commit代碼|tag|代名詞]~3</li></ul></li><li><p>還原工作目錄與索引，會跟最後一次commit 保持一樣→git reset --hard</p><ul><li>所有尚未commit都會還原，需要很小心使用</li></ul></li><li><p>刪除最近一次 commit →git reset --hard HEAD^</p></li><li><p>上面語法如果刪除錯了可以再用此語法還原 →git reset --hard ORIG_HEAD</p></li><li><p>刪除最近一次 commit，但保留異動內容→git reset --soft HEAD^</p></li><li><p>commit 後發現有幾個檔案忘了加入進去，想要補內容進去時→git commit --amend</p></li></ol><h1 id="看程式碼是誰寫的"><a href="#看程式碼是誰寫的" class="headerlink" title="看程式碼是誰寫的"></a>看程式碼是誰寫的</h1><p>git blame 檔案名稱</p><h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><ol><li>顯示所有本地分支→git branch</li><li>新增分支→git branch 分支名稱</li><li>新增分支→git branch 分支名稱 [commit] → 再某個commit上加分支</li><li>切換分支→git checkout 分支名稱</li><li>切換到歷史版本→git checkout XXXXXX(SHA前4-6碼 或tag名稱)</li><li>合併指定分支到目前的分支→git merge 分支名稱</li><li>將現在分支重新接到其他分支後面→git rebase 分支名稱<ul><li>例如現在在dog分支，想要接到cat分支後面，則下：git rebase cat</li><li>原本dog分支出來的commit會跑到cat分支的後面</li></ul></li><li>刪除分支→git branch -D 分支名稱</li><li>如果該分支還沒被完全合併但仍想強制刪除，則勾選「Force delete」就可順利刪除。</li></ol><h2 id="分支應用情境"><a href="#分支應用情境" class="headerlink" title="分支應用情境"></a>分支應用情境</h2><p>根據 Git Flow 的建議，主要的分支有 master、develop、hotfix、release 以及 feature 這五種分支，各種分支負責不同的功能。其中 Master 以及 Develop 這兩個分支又被稱做長期分支，因為他們會一直存活在整個 Git Flow 裡，而其它的分支大多會因任務結束而被刪除。</p><p><img src="flow.png" alt="flow"></p><h3 id="Master-分支"><a href="#Master-分支" class="headerlink" title="Master 分支"></a>Master 分支</h3><p>主要是用來放穩定、隨時可上線的版本。這個分支的來源只能從別的分支合併過來，開發者不會直接 Commit 到這個分支。因為是穩定版本，所以通常也會在這個分支上的 Commit 上打上版本號標籤。</p><h3 id="Develop-分支"><a href="#Develop-分支" class="headerlink" title="Develop 分支"></a>Develop 分支</h3><p>這個分支主要是所有開發的基礎分支，當要新增功能的時候，所有的 Feature 分支都是從這個分支切出去的。而 Feature 分支的功能完成後，也都會合併回來這個分支。</p><h3 id="Hotfix-分支"><a href="#Hotfix-分支" class="headerlink" title="Hotfix 分支"></a>Hotfix 分支</h3><p>當線上產品發生緊急問題的時候，會從 Master 分支開一個 Hotfix 分支出來進行修復，Hotfix 分支修復完成之後，會合併回 Master 分支，也同時會合併一份到 Develop 分支。</p><p>為什麼要合併回 Develop 分支？如果不這麼做，等到時候 Develop 分支完成並且合併回 Master 分支的時候，那個問題就又再次出現了。</p><h1 id="遠端數據庫操作"><a href="#遠端數據庫操作" class="headerlink" title="遠端數據庫操作"></a>遠端數據庫操作</h1><ul><li>複製遠端數據庫 →git clone 遠端數據庫網址</li><li>查詢遠端數據庫 →git remote</li><li>將本地分支推送到遠端分支 →git push 遠端數據庫名稱 遠端分支名稱</li><li>將遠端分支拉下來與本地分支進行合併 →git pull</li></ul><h1 id="標籤"><a href="#標籤" class="headerlink" title="標籤"></a>標籤</h1><ul><li>查詢標籤→git tag</li><li>查詢詳細標籤→git tag -n</li><li>刪除標籤→git tag -d 標籤名稱</li><li>新增輕量標籤→git tag 標籤名稱</li><li>新增標示標籤→git tag -am “備註內容” 標籤名稱</li></ul><h1 id="暫存"><a href="#暫存" class="headerlink" title="暫存"></a>暫存</h1><ul><li>暫時儲存當前目錄→git stash</li><li>瀏覽 stash 列表→git stash list</li><li>還原暫存→git stash pop</li><li>清除最新暫存→git stash drop</li><li>清除全部暫存→git stash clear</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;基礎設定&quot;&gt;&lt;a href=&quot;#基礎設定&quot; class=&quot;headerlink&quot; title=&quot;基礎設定&quot;&gt;&lt;/a&gt;基礎設定&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;查詢版本→git version&lt;/li&gt;
+&lt;li&gt;查詢設定列表→git config –list&lt;/li&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="程式語言" scheme="https://cwhuang9431.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
+    
+    
+      <category term="git" scheme="https://cwhuang9431.github.io/tags/git/"/>
+    
+      <category term="版本控制" scheme="https://cwhuang9431.github.io/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>美股隊長操作祕笈SCTR清單-20200717</title>
