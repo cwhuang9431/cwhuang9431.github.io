@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cwhuang9431.github.io/"/>
-  <updated>2020-08-16T12:48:32.983Z</updated>
+  <updated>2020-08-22T15:04:44.167Z</updated>
   <id>https://cwhuang9431.github.io/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>美股隊長操作祕笈SCTR清單-20200821</title>
+    <link href="https://cwhuang9431.github.io/2020/08/22/SCTR-list/"/>
+    <id>https://cwhuang9431.github.io/2020/08/22/SCTR-list/</id>
+    <published>2020-08-22T15:04:44.000Z</published>
+    <updated>2020-08-22T15:04:44.167Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下為S&amp;P500成分股，於20200821計算SCRT分數後前20名的結果<br>排序為SCTR分數由高到低</p><h1 id="清單"><a href="#清單" class="headerlink" title="清單"></a>清單</h1><table><thead><tr><th>排名</th><th>代號</th><th>名稱</th></tr></thead><tbody><tr><td>1</td><td>NVDA</td><td>NVIDIA Corporation</td></tr><tr><td>2</td><td>ABMD</td><td>ABIOMED Inc.</td></tr><tr><td>3</td><td>AAPL</td><td>Apple Inc.</td></tr><tr><td>4</td><td>AMD</td><td>Advanced Micro Devices Inc.</td></tr><tr><td>5</td><td>PYPL</td><td>PayPal Holdings Inc</td></tr><tr><td>6</td><td>UPS</td><td>United Parcel Service Inc. Class B</td></tr><tr><td>7</td><td>LB</td><td>L Brands Inc.</td></tr><tr><td>8</td><td>AMZN</td><td>Amazon.com Inc.</td></tr><tr><td>9</td><td>TSCO</td><td>Tractor Supply Company</td></tr><tr><td>10</td><td>WST</td><td>West Pharmaceutical Services Inc.</td></tr><tr><td>11</td><td>FDX</td><td>FedEx Corporation</td></tr><tr><td>12</td><td>EBAY</td><td>eBay Inc.</td></tr><tr><td>13</td><td>CDNS</td><td>Cadence Design Systems Inc.</td></tr><tr><td>14</td><td>TTWO</td><td>Take-Two Interactive Software Inc.</td></tr><tr><td>15</td><td>CMG</td><td>Chipotle Mexican Grill Inc.</td></tr><tr><td>16</td><td>SNPS</td><td>Synopsys Inc.</td></tr><tr><td>17</td><td>QCOM</td><td>QUALCOMM Incorporated</td></tr><tr><td>18</td><td>DHI</td><td>D.R. Horton Inc.</td></tr><tr><td>19</td><td>ODFL</td><td>Old Dominion Freight Line Inc.</td></tr><tr><td>20</td><td>DXCM</td><td>DexCom Inc.</td></tr></tbody></table><p>本文並無推薦之意請自行評估自負盈虧</p><h1 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h1><p><a href="/2020/07/04/SCTR-Introduction/" title="『閱讀筆記』美股隊長操作祕笈">『閱讀筆記』美股隊長操作祕笈</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;以下為S&amp;amp;P500成分股，於20200821計算SCRT分數後前20名的結果&lt;br&gt;排序為SCTR分數由高到低&lt;/p&gt;
+&lt;h1 id=&quot;清單&quot;&gt;&lt;a href=&quot;#清單&quot; class=&quot;headerlink&quot; title=&quot;清單&quot;&gt;&lt;/a&gt;清單&lt;/h1&gt;&lt;table
+      
+    
+    </summary>
+    
+    
+      <category term="投資" scheme="https://cwhuang9431.github.io/categories/%E6%8A%95%E8%B3%87/"/>
+    
+      <category term="股票" scheme="https://cwhuang9431.github.io/categories/%E6%8A%95%E8%B3%87/%E8%82%A1%E7%A5%A8/"/>
+    
+    
+      <category term="股票" scheme="https://cwhuang9431.github.io/tags/%E8%82%A1%E7%A5%A8/"/>
+    
+      <category term="SCTR" scheme="https://cwhuang9431.github.io/tags/SCTR/"/>
+    
+      <category term="美股" scheme="https://cwhuang9431.github.io/tags/%E7%BE%8E%E8%82%A1/"/>
+    
+      <category term="美股隊長" scheme="https://cwhuang9431.github.io/tags/%E7%BE%8E%E8%82%A1%E9%9A%8A%E9%95%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『財務自由的世界』選股清單-202007</title>
+    <link href="https://cwhuang9431.github.io/2020/08/22/filter-list/"/>
+    <id>https://cwhuang9431.github.io/2020/08/22/filter-list/</id>
+    <published>2020-08-22T15:00:56.000Z</published>
+    <updated>2020-08-22T15:00:56.028Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下為財務自由的世界一書最後面一章節的選股方法，再自行修改一些參數後所跑出來的選出清單<br>排序股票代號由低到高</p><h1 id="清單"><a href="#清單" class="headerlink" title="清單"></a>清單</h1><table><thead><tr><th>項次</th><th>代號</th><th>名稱</th></tr></thead><tbody><tr><td>1</td><td>1325</td><td>恆大</td></tr><tr><td>2</td><td>1507</td><td>永大</td></tr><tr><td>3</td><td>1614</td><td>三洋電</td></tr><tr><td>4</td><td>1712</td><td>興農</td></tr><tr><td>5</td><td>1720</td><td>生達</td></tr><tr><td>6</td><td>2313</td><td>華通</td></tr><tr><td>7</td><td>2330</td><td>台積電</td></tr><tr><td>8</td><td>2347</td><td>聯強</td></tr><tr><td>9</td><td>2356</td><td>英業達</td></tr><tr><td>10</td><td>2360</td><td>致茂</td></tr><tr><td>11</td><td>2376</td><td>技嘉</td></tr><tr><td>12</td><td>2377</td><td>微星</td></tr><tr><td>13</td><td>2382</td><td>廣達</td></tr><tr><td>14</td><td>2393</td><td>億光</td></tr><tr><td>15</td><td>2421</td><td>建準</td></tr><tr><td>16</td><td>2441</td><td>超豐</td></tr><tr><td>17</td><td>2449</td><td>京元電子</td></tr><tr><td>18</td><td>2454</td><td>聯發科</td></tr><tr><td>19</td><td>2458</td><td>義隆</td></tr><tr><td>20</td><td>2472</td><td>立隆電</td></tr><tr><td>21</td><td>2535</td><td>達欣工</td></tr><tr><td>22</td><td>3014</td><td>聯陽</td></tr><tr><td>23</td><td>3030</td><td>德律</td></tr><tr><td>24</td><td>3042</td><td>晶技</td></tr><tr><td>25</td><td>3078</td><td>僑威</td></tr><tr><td>26</td><td>3105</td><td>穩懋</td></tr><tr><td>27</td><td>3131</td><td>弘塑</td></tr><tr><td>28</td><td>3217</td><td>優群</td></tr><tr><td>29</td><td>3218</td><td>大學光</td></tr><tr><td>30</td><td>3227</td><td>原相</td></tr><tr><td>31</td><td>3257</td><td>虹冠電</td></tr><tr><td>32</td><td>3293</td><td>鈊象</td></tr><tr><td>33</td><td>3413</td><td>京鼎</td></tr><tr><td>34</td><td>3450</td><td>聯鈞</td></tr><tr><td>35</td><td>3533</td><td>嘉澤</td></tr><tr><td>36</td><td>3653</td><td>健策</td></tr><tr><td>37</td><td>4104</td><td>佳醫</td></tr><tr><td>38</td><td>4119</td><td>旭富</td></tr><tr><td>39</td><td>4205</td><td>中華食</td></tr><tr><td>40</td><td>4736</td><td>泰博</td></tr><tr><td>41</td><td>5274</td><td>信驊</td></tr><tr><td>42</td><td>5289</td><td>宜鼎</td></tr><tr><td>43</td><td>5471</td><td>松翰</td></tr><tr><td>44</td><td>5474</td><td>聰泰</td></tr><tr><td>45</td><td>5478</td><td>智冠</td></tr><tr><td>46</td><td>5903</td><td>全家</td></tr><tr><td>47</td><td>6146</td><td>耕興</td></tr><tr><td>48</td><td>6183</td><td>關貿</td></tr><tr><td>49</td><td>6239</td><td>力成</td></tr><tr><td>50</td><td>6261</td><td>久元</td></tr><tr><td>51</td><td>6271</td><td>同欣電</td></tr><tr><td>52</td><td>6281</td><td>全國電</td></tr><tr><td>53</td><td>6411</td><td>晶焱</td></tr><tr><td>54</td><td>6416</td><td>瑞祺電通</td></tr><tr><td>55</td><td>6582</td><td>申豐</td></tr><tr><td>56</td><td>8081</td><td>致新</td></tr><tr><td>57</td><td>8112</td><td>至上</td></tr><tr><td>58</td><td>8131</td><td>福懋科</td></tr><tr><td>59</td><td>8150</td><td>南茂</td></tr><tr><td>60</td><td>8299</td><td>群聯</td></tr><tr><td>61</td><td>8358</td><td>金居</td></tr><tr><td>62</td><td>8422</td><td>可寧衛</td></tr><tr><td>63</td><td>9925</td><td>新保</td></tr></tbody></table><p>本文並無推薦之意請自行評估自負盈虧</p><h1 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h1><p><a href="/2020/06/27/filter-stock/" title="篩選股票">篩選股票</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;以下為財務自由的世界一書最後面一章節的選股方法，再自行修改一些參數後所跑出來的選出清單&lt;br&gt;排序股票代號由低到高&lt;/p&gt;
+&lt;h1 id=&quot;清單&quot;&gt;&lt;a href=&quot;#清單&quot; class=&quot;headerlink&quot; title=&quot;清單&quot;&gt;&lt;/a&gt;清單&lt;/h1&gt;&lt;table&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="投資" scheme="https://cwhuang9431.github.io/categories/%E6%8A%95%E8%B3%87/"/>
+    
+      <category term="股票" scheme="https://cwhuang9431.github.io/categories/%E6%8A%95%E8%B3%87/%E8%82%A1%E7%A5%A8/"/>
+    
+    
+      <category term="股票" scheme="https://cwhuang9431.github.io/tags/%E8%82%A1%E7%A5%A8/"/>
+    
+      <category term="選股" scheme="https://cwhuang9431.github.io/tags/%E9%81%B8%E8%82%A1/"/>
+    
+      <category term="財務自由的世界" scheme="https://cwhuang9431.github.io/tags/%E8%B2%A1%E5%8B%99%E8%87%AA%E7%94%B1%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    
+      <category term="黃國華" scheme="https://cwhuang9431.github.io/tags/%E9%BB%83%E5%9C%8B%E8%8F%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>美股隊長操作祕笈SCTR清單-20200814</title>
@@ -587,64 +658,6 @@
     
     
       <category term="閱讀筆記" scheme="https://cwhuang9431.github.io/tags/%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>該如何估計個股eps?</title>
-    <link href="https://cwhuang9431.github.io/2020/05/24/eps/"/>
-    <id>https://cwhuang9431.github.io/2020/05/24/eps/</id>
-    <published>2020-05-24T07:23:20.000Z</published>
-    <updated>2020-05-24T07:26:30.937Z</updated>
-    
-    <content type="html"><![CDATA[<p>買賣個股時，最重要的就是預估公司的好壞，有人使用技術分析，也就是看公司的價格線型，還預估未來走勢，好處有圖，各個轉折點連線，好像自己有可以找出一個合理的解釋，我無此方面的天份，也覺得心裡不踏實；另一種就是使用財報分析，又稱基本面分析，利用過去公司財務報表，預估未來公司的好壞，我個人是比較推崇只種做法，畢竟一張上萬元起跳的股票，還是要了解一下公司營運。</p><p>很多人雖然也會看財務報表，但只是看看個項目的消長，並沒有近一步分析，或是預估未來。</p><p>股價是否便宜的依據有很多種，有存股族喜歡的<strong>現金殖利率</strong>，巴菲特喜歡的<strong>股東權益報酬率</strong>，或<strong>本益比</strong>等等。</p><p>本章著重在預估每股盈餘(eps)，與上述的本益比最有關係，本益比的公式為 <strong>股價/每股盈餘</strong>，其本益比的意義是，投入的資金多少年後可以回本，例如股價100元，每股盈餘10元，代表本益比10倍，也就是說您所投入每股100元的資金，若公司每年每股賺10元，需要10年才可以回本。</p><p>而10倍本益比是否高或低，並無法直接從數字上的大小評斷，還要綜合公司的成長性(明年每股可以賺20元)，或市場是否對此產業報有較大的期望，甚至公司治理等，皆會影響市場上對公司本益比高低的評斷。</p><h3 id="財報公式"><a href="#財報公式" class="headerlink" title="財報公式"></a>財報公式</h3><ul><li>稅後淨利率=稅後淨利/營收</li><li>每股盈餘=(稅後淨利-當年特別股股利)／加權平均股數</li><li>本益比=股價/每股盈餘</li></ul><h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><table><thead><tr><th>會計科目</th><th align="right">數值</th></tr></thead><tbody><tr><td>營業收入(億)</td><td align="right">3000</td></tr><tr><td>營業收入年增率(%)</td><td align="right">10%</td></tr><tr><td>稅後淨利(億)</td><td align="right">600</td></tr><tr><td>加權平均股數</td><td align="right">20</td></tr><tr><td>當年特別股股利(元)</td><td align="right">０</td></tr><tr><td>股價(元)</td><td align="right">396</td></tr></tbody></table><h4 id="計算過程"><a href="#計算過程" class="headerlink" title="計算過程"></a>計算過程</h4><ol><li>求未來營收<ol><li>公式：未來營收=營收*(1+營收年增率)</li><li>3000*(1+10%) = 3300</li></ol></li><li>求稅後淨利率<ol><li>公式：稅後淨利率=稅後淨利/營收</li><li>可將近幾季度平均，用此假設下一季度或年度的稅後淨利</li><li>600/3000 = 20%</li></ol></li><li>求稅後淨利<ol><li>公式：稅後淨利=營收*稅後淨利率</li><li>3300*20%=660</li></ol></li><li>求每股盈餘<ol><li>公式：(稅後淨利-當年特別股股利)／加權平均股數</li><li>(660-0)/20=33(元)</li></ol></li><li>求本益比<ol><li>公式：股價／每股盈餘</li><li>396/33=12(倍)</li></ol></li></ol><h3 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h3><p>此算法只是簡單利用稅後淨利率求得稅後淨利，但從營收到稅後淨利之間的過程還是有很多地方需要注意，且部分公司賺錢的來源並非本業，應需個股狀況加以調整。</p><h3 id="個股財報資料"><a href="#個股財報資料" class="headerlink" title="個股財報資料"></a>個股財報資料</h3><p>各券商都提供個股財報資訊<br><a href="http://jsjustweb.jihsun.com.tw/z/zc/zcs/zcs_1101.djhtm" target="_blank" rel="noopener" title="日盛證券-個股速覽">日盛證券-個股速覽</a><br>官方公開資訊觀測站也有<br><a href="https://mops.twse.com.tw/mops/web/index" target="_blank" rel="noopener" title="公開資訊觀測站">公開資訊觀測站</a></p><h3 id="小試身手"><a href="#小試身手" class="headerlink" title="小試身手"></a>小試身手</h3><p>從券商的個股財報裡可以快速取得整理過後的資訊，點入上方連結，修改網址股票代號，您也試著算算看手中持股的預估EPS吧！，要注意的是稅後淨利在損益表上的會計科目為<strong>繼續營業單位損益</strong>或直接抓取財務比率的<strong>稅後淨利率</strong>，而營收年增率可以重基本分析下的營收盈餘自行預估，建議先不加入營收成長率，先試算看看自己算的EPS與損益表上公布的EPS是否相符，再算算如果營收增加的情況下，未來EPS會是多少</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;買賣個股時，最重要的就是預估公司的好壞，有人使用技術分析，也就是看公司的價格線型，還預估未來走勢，好處有圖，各個轉折點連線，好像自己有可以找出一個合理的解釋，我無此方面的天份，也覺得心裡不踏實；另一種就是使用財報分析，又稱基本面分析，利用過去公司財務報表，預估未來公司的好壞
-      
-    
-    </summary>
-    
-    
-      <category term="投資" scheme="https://cwhuang9431.github.io/categories/%E6%8A%95%E8%B3%87/"/>
-    
-    
-      <category term="eps" scheme="https://cwhuang9431.github.io/tags/eps/"/>
-    
-      <category term="投資" scheme="https://cwhuang9431.github.io/tags/%E6%8A%95%E8%B3%87/"/>
-    
-      <category term="財報分析" scheme="https://cwhuang9431.github.io/tags/%E8%B2%A1%E5%A0%B1%E5%88%86%E6%9E%90/"/>
-    
-      <category term="基本面分析" scheme="https://cwhuang9431.github.io/tags/%E5%9F%BA%E6%9C%AC%E9%9D%A2%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown 筆記</title>
-    <link href="https://cwhuang9431.github.io/2020/05/24/markdown/"/>
-    <id>https://cwhuang9431.github.io/2020/05/24/markdown/</id>
-    <published>2020-05-23T17:14:29.000Z</published>
-    <updated>2020-05-23T17:14:29.697Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="超連結"><a href="#超連結" class="headerlink" title="超連結"></a>超連結</h1><h2 id="外部超連結"><a href="#外部超連結" class="headerlink" title="外部超連結"></a>外部超連結</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">顯示文字</span>](<span class="link">http://url.com.tw "title"</span>)</span><br></pre></td></tr></table></figure><h2 id="內部文章"><a href="#內部文章" class="headerlink" title="內部文章"></a>內部文章</h2><p>想直接連結至本文標題可以直接使用下列方法，但必須符合下列規範</p><ol><li>刪除所有標點符號</li><li>＃後方的空格需刪除</li><li>將所有文字轉成小寫(非必要)</li><li>文字間的空格使用<code>-</code>代替<br>例如標題<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## 1.1 Hello World</span></span><br></pre></td></tr></table></figure>可以用下列語法超連結內文<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Link</span>](<span class="link">#11-hello-world</span>)</span><br></pre></td></tr></table></figure></li></ol><h1 id="圖片"><a href="#圖片" class="headerlink" title="圖片"></a>圖片</h1><p>語法與超連結類似, 但前面用驚嘆號 ! 開頭, 中括號內放的是萬一圖片不存在時的替代顯示文字, 格式如下 :</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">替代文字</span>](<span class="link">URL</span>)</span><br></pre></td></tr></table></figure><h1 id="外部資源"><a href="#外部資源" class="headerlink" title="外部資源"></a>外部資源</h1><h2 id="線上編輯器"><a href="#線上編輯器" class="headerlink" title="線上編輯器"></a>線上編輯器</h2><p><a href="https://pandao.github.io/editor.md/" target="_blank" rel="noopener" title="Editor.me">Editor.me</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;超連結&quot;&gt;&lt;a href=&quot;#超連結&quot; class=&quot;headerlink&quot; title=&quot;超連結&quot;&gt;&lt;/a&gt;超連結&lt;/h1&gt;&lt;h2 id=&quot;外部超連結&quot;&gt;&lt;a href=&quot;#外部超連結&quot; class=&quot;headerlink&quot; title=&quot;外部超連結&quot;&gt;&lt;/a&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="程式語言" scheme="https://cwhuang9431.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
-    
-    
-      <category term="markdown" scheme="https://cwhuang9431.github.io/tags/markdown/"/>
     
   </entry>
   
